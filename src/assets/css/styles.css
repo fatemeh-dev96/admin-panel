@@ -1,3 +1,33 @@
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    background: #343a40;
+    padding-top: 20px;
+}
+.sidebar .nav-link {
+    color: white;
+}
+.sidebar .nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.rounded-circle{
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+}
+/* Hide sidebar on small screens */
+@media (max-width: 991px) {
+    .sidebar {
+        display: none;
+    }
+    .content {
+        margin-left: 0;
+    }
+}
 /* Full-width search bar */
 #searchBar {
     position: fixed;
