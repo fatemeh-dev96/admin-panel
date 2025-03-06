@@ -1,32 +1,607 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
+<!-- <html lang="fa" dir="rtl"> -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.rtl.min.css">
+
     <link rel="stylesheet" href="../src/assets/css/fontawesome/all.min.css">
-<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">-->
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">-->
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>Admin Panel</title>
 
 </head>
 <body>
-
 <!-- Sidebar for Large Screens -->
-<div class="sidebar d-none d-lg-block">
-    <h4 class="text-white text-center">Menu</h4>
-    <ul class="nav flex-column">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+<div class="sidebar bg-white vh-100">
+    <!-- Profile Section -->
+    <div class="profile-section position-relative text-center">
+        <img src="assets/img/bg.png" alt="Background" class="img-fluid background">
+        <div class="overlay"></div>
+        <img src="assets/img/avatar.png" alt="User Avatar" class="avatar">
+        <p class="fw-bold text-white position-absolute username">Julia Roberts</p>
+    </div>
+
+    <!-- Menu -->
+    <ul class="nav flex-column mt-4 text-white">
         <li class="nav-item">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Dropdown</a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action 1</a></li>
-                <li><a class="dropdown-item" href="#">Action 2</a></li>
-            </ul>
+            <a href="#" class="nav-link text-dark"><i class="fa fa-house"></i> Dashboard</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link text-dark"><i class="fa fa-circle"></i> Buttons</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link text-dark"><i class="fa fa-list-check"></i> Forms</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link text-dark"><i class="fa fa-info-circle"></i> Alerts</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link text-dark"><i class="fa fa-star"></i> Ratings</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link text-dark"><i class="fa fa-image"></i> Images</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link text-dark"><i class="fa fa-arrow-left"></i> Pagination</a>
         </li>
     </ul>
 </div>
+<!-- Main Content -->
+<main class="main-content">
+    <div class="row mt-4">
+        <div class="col-12 col-lg-8">
+
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h2>Sales Overview</h2>
+                    <p>Ample Admin Vs Pixel Admin</p>
+                    <div class="legend">
+                        <span class="legend-item"><span class="dot blue"></span>Ample</span>
+                        <span class="legend-item"><span class="dot cyan"></span>Pixel</span>
+                    </div>
+                </div>
+
+                <div class="chart">
+                    <div class="y-axis">
+                        <span>400</span>
+                        <span>300</span>
+                        <span>200</span>
+                        <span>100</span>
+                    </div>
+
+                    <div class="bars-container">
+                        <div class="bar-group">
+                            <div class="bar blue" style="height: 200px;"></div>
+                            <div class="bar cyan" style="height: 280px;"></div>
+                            <span class="label">Mon</span>
+                        </div>
+                        <!-- Repeat for other days -->
+                        <div class="bar-group">
+                            <div class="bar blue" style="height: 380px;"></div>
+                            <div class="bar cyan" style="height: 240px;"></div>
+                            <span class="label">Tue</span>
+                        </div>
+                        <div class="bar-group">
+                            <div class="bar blue" style="height: 380px;"></div>
+                            <div class="bar cyan" style="height: 240px;"></div>
+                            <span class="label">Wed</span>
+                        </div>
+                        <div class="bar-group">
+                            <div class="bar blue" style="height: 380px;"></div>
+                            <div class="bar cyan" style="height: 240px;"></div>
+                            <span class="label">Thu</span>
+                        </div>
+                        <div class="bar-group">
+                            <div class="bar blue" style="height: 400px;"></div>
+                            <div class="bar cyan" style="height: 240px;"></div>
+                            <span class="label">Fri</span>
+                        </div>
+                        <div class="bar-group">
+                            <div class="bar blue" style="height: 380px;"></div>
+                            <div class="bar cyan" style="height: 240px;"></div>
+                            <span class="label">Sat</span>
+                        </div>
+                        <div class="bar-group">
+                            <div class="bar blue" style="height: 310px;"></div>
+                            <div class="bar cyan" style="height: 220px;"></div>
+                            <span class="label">Sun</span>
+                        </div>
+                        <!-- ... -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <div class="card-image">
+                        <img src="assets/img/bg.png" alt="Scenic view" class="full-width-img">
+                    </div>
+
+                    <div class="card-content">
+                        <!-- Date -->
+                        <div class="date">
+                            <i class="fa fa-clock"></i>
+                            22 March, 2023
+                        </div>
+
+                        <!-- Description -->
+                        <h3 class="description">Super awesome, Vue 3 is there, Lets do this!</h3>
+
+                        <!-- Tags -->
+                        <div class="tags">
+                            <span class="tag medium">Medium</span>
+                            <span class="tag low">Low</span>
+                        </div>
+
+                        <!-- Footer with avatars and chat icon -->
+                        <div class="card-footer">
+                            <div class="avatarscards">
+                                <img src="assets/img/avatar.png" alt="User 1" class="avatarcards">
+                                <img src="assets/img/avatar.png" alt="User 2" class="avatarcards">
+                                <img src="assets/img/avatar.png" alt="User 3" class="avatarcards">
+                            </div>
+                            <div class="chat-icon">
+                                <i class="fa fa-comment"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt-4">
+        <div class="row">
+
+            <div class="col-12 col-lg-3">
+                <div class="row">
+                    <!-- Profile Card -->
+                    <div class="col-12 mb-3">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <div class="card-image">
+                                    <img src="assets/img/bg.png" alt="Scenic view" class="full-width-img">
+                                </div>
+
+                                <div class="card-content">
+                                    <div class="text-center align-items-center socialcontent">
+                                        <img src="assets/img/avatar.png" class="avatarsprofile rounded-circle me-3"
+                                             alt="User">
+                                        <div>
+                                            <h5 class="mb-1 mt-2">John Doe</h5>
+                                            <h6 class="text-muted">Web Developer</h6>
+                                            <button type="button" class="btn btn-primary">Follow</button>
+                                        </div>
+                                    </div>
+                                    <div class="row text-center align-items-center mt-3">
+                                        <div class="col-4">
+                                            <h5 class="mb-1">1,099</h5>
+                                            <h6 class="text-muted">Articles</h6>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="mb-1">2,000</h5>
+                                            <h6 class="text-muted">Followers</h6>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="mb-1">1,500</h5>
+                                            <h6 class="text-muted">Following</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contacts Card -->
+                    <div class="col-12  mb-3">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <div class="card-title bg-primary p-3 rounded">
+                                    <h5 class="text-white mb-1">My Contacts</h5>
+                                    <p class="text-white-50 mb-0">Checkout my contacts here</p>
+                                </div>
+
+                                <div class="contacts-list mt-3">
+                                    <div class="contact-item d-flex align-items-center mb-3">
+                                        <img src="assets/img/avatar.png" class="rounded-circle me-2" width="40"
+                                             alt="Oliver Jake">
+                                        <div>
+                                            <h6 class="mb-0">Oliver Jake</h6>
+                                            <small class="text-muted">info@oliver.com</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="contact-item d-flex align-items-center mb-3">
+                                        <img src="assets/img/avatar.png" class="rounded-circle me-2" width="40"
+                                             alt="Jack Connor">
+                                        <div>
+                                            <h6 class="mb-0">Jack Connor</h6>
+                                            <small class="text-muted">info@jack.com</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="contact-item d-flex align-items-center mb-3">
+                                        <img src="assets/img/avatar.png" class="rounded-circle me-2" width="40"
+                                             alt="Harry Callum">
+                                        <div>
+                                            <h6 class="mb-0">Harry Callum</h6>
+                                            <small class="text-muted">info@harry.com</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="contact-item d-flex align-items-center">
+                                        <img src="assets/img/avatar.png" class="rounded-circle me-2" width="40"
+                                             alt="Jacob Reece">
+                                        <div>
+                                            <h6 class="mb-0">Jacob Reece</h6>
+                                            <small class="text-muted">info@jacob.com</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <!-- Activity Feed Card -->
+            <div class="col-12 col-lg-6 mb-3">
+                <div class="card shadow-sm" style="min-height: 300px;">
+                    <div class="card-body">
+                        <ul class="nav nav-tabs mb-4">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Activity</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Settings</a>
+                            </li>
+                        </ul>
+
+                        <div class="activity-feed position-relative" style="max-height: 700px">
+                            <div class="timeline-line"></div>
+
+                            <!-- First Activity Item -->
+                            <div class="activity-item d-flex mb-4 position-relative">
+                                <!-- <div class="timeline-point"> -->
+
+                                <img src="assets/img/avatar.png" class="avatars rounded-circle me-3" alt="User">
+                                <!-- </div> -->
+
+                                <div class="activity-content">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <h6 class="mb-0 me-2">John Doe</h6>
+                                        <small class="text-muted">5 minutes ago</small>
+                                    </div>
+                                    <p class="mb-2">assign a new task Design weblayout</p>
+                                    <div class="activity-images d-flex gap-2 mb-2">
+                                        <img src="assets/img/ski.jpg" alt="Activity Image"
+                                             class="img-fluid rounded"
+                                             style="width: 60px;">
+                                        <img src="assets/img/ski.jpg" alt="Activity Image"
+                                             class="img-fluid rounded"
+                                             style="width: 60px;">
+                                        <img src="assets/img/ski.jpg" alt="Activity Image"
+                                             class="img-fluid rounded"
+                                             style="width: 60px;">
+                                        <img src="assets/img/ski.jpg" alt="Activity Image"
+                                             class="img-fluid rounded"
+                                             style="width: 60px;">
+                                    </div>
+                                    <div class="activity-actions">
+                                        <a href="#" class="me-3 text-decoration-none">
+                                            <i class="far fa-comment"></i> Comments
+                                        </a>
+                                        <a href="#" class="text-decoration-none">
+                                            <i class="far fa-heart"></i> 5 Likes
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Second Activity Item -->
+                            <div class="activity-item d-flex mb-4 position-relative">
+                                <!-- <div class="timeline-point"> -->
+
+                                <img src="assets/img/avatar.png" class="avatars rounded-circle me-3" alt="User">
+                                <!-- </div> -->
+                                <div class="activity-content">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <h6 class="mb-0 me-2">James Smith</h6>
+                                        <small class="text-muted">5 minutes ago</small>
+                                    </div>
+                                    <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Integer nec
+                                        odio. Praesent libero.</p>
+                                    <div class="activity-images mb-2">
+                                        <img src="assets/img/ski.jpg" alt="Activity Image"
+                                             class="img-fluid rounded"
+                                             style="width: 60px;">
+                                    </div>
+                                    <a href="#" class="btn btn-primary btn-sm">Design Layout</a>
+                                    <div class="activity-actions mt-2">
+                                        <a href="#" class="me-3 text-decoration-none">
+                                            <i class="far fa-comment"></i> Comments
+                                        </a>
+                                        <a href="#" class="text-decoration-none">
+                                            <i class="far fa-heart"></i> 5 Likes
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="activity-item d-flex mb-4 position-relative">
+                                <!-- <div class="timeline-point"> -->
+
+                                <img src="assets/img/avatar.png" class="avatars rounded-circle me-3" alt="User">
+                                <!-- </div> -->
+                                <div class="activity-content">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <h6 class="mb-0 me-2">James Smith</h6>
+                                        <small class="text-muted">5 minutes ago</small>
+                                    </div>
+                                    <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Integer nec
+                                        odio. Praesent libero.</p>
+                                    <div class="activity-images mb-2">
+                                        <img src="assets/img/ski.jpg" alt="Activity Image"
+                                             class="img-fluid rounded"
+                                             style="width: 60px;">
+                                    </div>
+                                    <a href="#" class="btn btn-primary btn-sm">Design Layout</a>
+                                    <div class="activity-actions mt-2">
+                                        <a href="#" class="me-3 text-decoration-none">
+                                            <i class="far fa-comment"></i> Comments
+                                        </a>
+                                        <a href="#" class="text-decoration-none">
+                                            <i class="far fa-heart"></i> 5 Likes
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Stats Cards -->
+                            <div class="activity-item d-flex mb-4 position-relative">
+                                <!-- <div class="timeline-point"> -->
+
+                                <img src="assets/img/avatar.png" class="avatars rounded-circle me-3" alt="User">
+                                <!-- </div> -->
+                                <div class="activity-content">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <h6 class="mb-0 me-2">James Smith</h6>
+                                        <small class="text-muted">5 minutes ago</small>
+                                    </div>
+                                    <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Integer nec
+                                        odio. Praesent libero.</p>
+                                    <div class="activity-images mb-2">
+                                        <img src="assets/img/ski.jpg" alt="Activity Image"
+                                             class="img-fluid rounded"
+                                             style="width: 60px;">
+                                    </div>
+                                    <a href="#" class="btn btn-primary btn-sm">Design Layout</a>
+                                    <div class="activity-actions mt-2">
+                                        <a href="#" class="me-3 text-decoration-none">
+                                            <i class="far fa-comment"></i> Comments
+                                        </a>
+                                        <a href="#" class="text-decoration-none">
+                                            <i class="far fa-heart"></i> 5 Likes
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+
+<!--<main class="main-content">-->
+<!--    <div class="container-fluid">-->
+<!--        &lt;!&ndash; First Row &ndash;&gt;-->
+<!--        <div class="row">-->
+<!--            &lt;!&ndash; First Card (Sales Overview) &ndash;&gt;-->
+<!--            <div class="col-12 col-lg-4 mb-4">-->
+<!--                <div class="card shadow-sm">-->
+<!--                    <div class="card-body">-->
+<!--                        <div class="card-image">-->
+<!--                            <img src="assets/img/bg.png" alt="Scenic view" class="full-width-img">-->
+<!--                        </div>-->
+
+<!--                        <div class="card-content">-->
+<!--                            <div class="text-center align-items-center socialcontent">-->
+<!--                                <img src="assets/img/avatar.png" class="avatarsprofile rounded-circle me-3"-->
+<!--                                     alt="User">-->
+<!--                                <div>-->
+<!--                                    <h5 class="mb-1 mt-2">John Doe</h5>-->
+<!--                                    <h6 class="text-muted">Web Developer</h6>-->
+<!--                                    <button type="button" class="btn btn-primary">Follow</button>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row text-center align-items-center mt-3">-->
+<!--                                <div class="col-4">-->
+<!--                                    <h5 class="mb-1">1,099</h5>-->
+<!--                                    <h6 class="text-muted">Articles</h6>-->
+<!--                                </div>-->
+<!--                                <div class="col-4">-->
+<!--                                    <h5 class="mb-1">2,000</h5>-->
+<!--                                    <h6 class="text-muted">Followers</h6>-->
+<!--                                </div>-->
+<!--                                <div class="col-4">-->
+<!--                                    <h5 class="mb-1">1,500</h5>-->
+<!--                                    <h6 class="text-muted">Following</h6>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; Second Card (Activity Card) &ndash;&gt;-->
+<!--            <div class="col-12 col-lg-8 mb-4">-->
+<!--                <div class="card shadow-sm" style="min-height: 300px;">-->
+<!--                    <div class="card-body">-->
+<!--                        <ul class="nav nav-tabs mb-4">-->
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link active" href="#">Activity</a>-->
+<!--                            </li>-->
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link" href="#">Profile</a>-->
+<!--                            </li>-->
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link" href="#">Settings</a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+
+<!--                        &lt;!&ndash; Scrollable Activity Feed &ndash;&gt;-->
+<!--                        <div class="activity-feed position-relative" style="max-height: 500px; overflow-y: auto;">-->
+<!--                            <div class="timeline-line"></div>-->
+
+<!--                            &lt;!&ndash; First Activity Item &ndash;&gt;-->
+<!--                            <div class="activity-item d-flex mb-4 position-relative">-->
+<!--                                <img src="assets/img/avatar.png" class="avatars rounded-circle me-3" alt="User">-->
+<!--                                <div class="activity-content">-->
+<!--                                    <div class="d-flex align-items-center mb-2">-->
+<!--                                        <h6 class="mb-0 me-2">John Doe</h6>-->
+<!--                                        <small class="text-muted">5 minutes ago</small>-->
+<!--                                    </div>-->
+<!--                                    <p class="mb-2">Assign a new task: Design web layout</p>-->
+<!--                                    <div class="activity-images d-flex gap-2 mb-2">-->
+<!--                                        <img src="assets/img/ski.jpg" alt="Activity Image" class="img-fluid rounded"-->
+<!--                                             style="width: 60px;">-->
+<!--                                        <img src="assets/img/ski.jpg" alt="Activity Image" class="img-fluid rounded"-->
+<!--                                             style="width: 60px;">-->
+<!--                                        <img src="assets/img/ski.jpg" alt="Activity Image" class="img-fluid rounded"-->
+<!--                                             style="width: 60px;">-->
+<!--                                        <img src="assets/img/ski.jpg" alt="Activity Image" class="img-fluid rounded"-->
+<!--                                             style="width: 60px;">-->
+<!--                                    </div>-->
+<!--                                    <div class="activity-actions">-->
+<!--                                        <a href="#" class="me-3 text-decoration-none">-->
+<!--                                            <i class="far fa-comment"></i> Comments-->
+<!--                                        </a>-->
+<!--                                        <a href="#" class="text-decoration-none">-->
+<!--                                            <i class="far fa-heart"></i> 5 Likes-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            &lt;!&ndash; Second Activity Item &ndash;&gt;-->
+<!--                            <div class="activity-item d-flex mb-4 position-relative">-->
+<!--                                <img src="assets/img/avatar.png" class="avatars rounded-circle me-3" alt="User">-->
+<!--                                <div class="activity-content">-->
+<!--                                    <div class="d-flex align-items-center mb-2">-->
+<!--                                        <h6 class="mb-0 me-2">James Smith</h6>-->
+<!--                                        <small class="text-muted">5 minutes ago</small>-->
+<!--                                    </div>-->
+<!--                                    <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec-->
+<!--                                        odio. Praesent libero.</p>-->
+<!--                                    <div class="activity-images mb-2">-->
+<!--                                        <img src="assets/img/ski.jpg" alt="Activity Image" class="img-fluid rounded"-->
+<!--                                             style="width: 60px;">-->
+<!--                                    </div>-->
+<!--                                    <a href="#" class="btn btn-primary btn-sm">Design Layout</a>-->
+<!--                                    <div class="activity-actions mt-2">-->
+<!--                                        <a href="#" class="me-3 text-decoration-none">-->
+<!--                                            <i class="far fa-comment"></i> Comments-->
+<!--                                        </a>-->
+<!--                                        <a href="#" class="text-decoration-none">-->
+<!--                                            <i class="far fa-heart"></i> 5 Likes-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            &lt;!&ndash; Add more activity items here to test scrolling &ndash;&gt;-->
+<!--                            &lt;!&ndash; Repeat activity items to test scroll &ndash;&gt;-->
+<!--                            <div class="activity-item d-flex mb-4 position-relative">-->
+<!--                                <img src="assets/img/avatar.png" class="avatars rounded-circle me-3" alt="User">-->
+<!--                                <div class="activity-content">-->
+<!--                                    <div class="d-flex align-items-center mb-2">-->
+<!--                                        <h6 class="mb-0 me-2">James Smith</h6>-->
+<!--                                        <small class="text-muted">5 minutes ago</small>-->
+<!--                                    </div>-->
+<!--                                    <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec-->
+<!--                                        odio. Praesent libero.</p>-->
+<!--                                    <div class="activity-images mb-2">-->
+<!--                                        <img src="assets/img/ski.jpg" alt="Activity Image" class="img-fluid rounded"-->
+<!--                                             style="width: 60px;">-->
+<!--                                    </div>-->
+<!--                                    <a href="#" class="btn btn-primary btn-sm">Design Layout</a>-->
+<!--                                    <div class="activity-actions mt-2">-->
+<!--                                        <a href="#" class="me-3 text-decoration-none">-->
+<!--                                            <i class="far fa-comment"></i> Comments-->
+<!--                                        </a>-->
+<!--                                        <a href="#" class="text-decoration-none">-->
+<!--                                            <i class="far fa-heart"></i> 5 Likes-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Second Row (Third Card) &ndash;&gt;-->
+<!--        <div class="row">-->
+<!--            <div class="col-12 col-lg-4">-->
+<!--                <div class="card shadow-sm">-->
+<!--                    <div class="card-body">-->
+<!--                        <div class="card-image">-->
+<!--                            <img src="assets/img/bg.png" alt="Scenic view" class="full-width-img">-->
+<!--                        </div>-->
+
+<!--                        <div class="card-content">-->
+<!--                            <div class="text-center align-items-center socialcontent">-->
+<!--                                <img src="assets/img/avatar.png" class="avatarsprofile rounded-circle me-3"-->
+<!--                                     alt="User">-->
+<!--                                <div>-->
+<!--                                    <h5 class="mb-1 mt-2">John Doe</h5>-->
+<!--                                    <h6 class="text-muted">Web Developer</h6>-->
+<!--                                    <button type="button" class="btn btn-primary">Follow</button>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row text-center align-items-center mt-3">-->
+<!--                                <div class="col-4">-->
+<!--                                    <h5 class="mb-1">1,099</h5>-->
+<!--                                    <h6 class="text-muted">Articles</h6>-->
+<!--                                </div>-->
+<!--                                <div class="col-4">-->
+<!--                                    <h5 class="mb-1">2,000</h5>-->
+<!--                                    <h6 class="text-muted">Followers</h6>-->
+<!--                                </div>-->
+<!--                                <div class="col-4">-->
+<!--                                    <h5 class="mb-1">1,500</h5>-->
+<!--                                    <h6 class="text-muted">Following</h6>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</main>-->
+
 
 <!-- Top Navbar -->
 <nav class="navbar navbar-expand-lg bg-primary fixed-top">
@@ -35,23 +610,39 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="d-flex align-items-start align-items-center">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">Brand</a>
 
-        <!-- Brand -->
-        <a class="navbar-brand" href="#">Brand</a>
+            <!-- Search Icon (Toggle Button) -->
+            <button class="btn  border-0  me-5 d-flex" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#searchBar">
+                <i class="fa-solid fa-search"></i> <!-- Search Icon -->
+            </button>
+        </div>
 
-        <!-- Search Icon (Toggle Button) -->
-        <button class="btn  border-0 me-5 d-flex" type="button" data-bs-toggle="collapse" data-bs-target="#searchBar">
-            <i class="fa-solid fa-search"></i> <!-- Search Icon -->
-        </button>
 
         <!-- Profile Dropdown -->
         <div class="dropdown me-5">
             <button class="btn border-0 p-0 align-items-center  shadow-none" type="button" data-bs-toggle="dropdown">
                 <img src="assets/img/avatar.png" alt="User Avatar" class="rounded-circle">
             </button>
-            <ul class="dropdown-menu dropdown-menu-end mt-2">
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Logout</a></li>
+            <button class="btn btn-light" type="button" id="languageToggle">
+                <i class="fa fa-globe"></i>
+                <span class="language-text">English</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end mt-2 bg-white m-5">
+                <li><a class="dropdown-item" href="#">My Profile</a></li>
+                <li><a class="dropdown-item" href="#">My Account</a></li>
+                <li><a class="dropdown-item" href="#">Change Password</a></li>
+                <li><a class="dropdown-item" href="#">My Task</a></li>
+
+                <li>
+                    <hr class="dropdown-divider">
+                </li> <!-- Divider before logout button -->
+                <li class="px-3">
+                    <button class="btn btn-primary w-100">Logout</button>
+                </li>
             </ul>
         </div>
 
@@ -68,13 +659,16 @@
         <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
-            <li class="nav-item">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Dropdown</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action 1</a></li>
-                    <li><a class="dropdown-item" href="#">Action 2</a></li>
-                </ul>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Alerts</a></li>
+
+            <!--            <li class="nav-item">-->
+            <!--                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Dropdown</a>-->
+            <!--                <ul class="dropdown-menu">-->
+            <!--                    <li><a class="dropdown-item" href="#">Action 1</a></li>-->
+            <!--                    <li><a class="dropdown-item" href="#">Action 2</a></li>-->
+            <!--                </ul>-->
+            <!--            </li>-->
         </ul>
     </div>
 </div>
@@ -90,6 +684,8 @@
         </form>
     </div>
 </div>
+
+<script src="assets/js/core.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

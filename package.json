@@ -1,5 +1,9 @@
 {
   "dependencies": {
     "bootstrap": "^5.3.3"
+  },
+  "scripts": {
+    "build-css": "sass src/assets/css/styles.scss dist/assets/css/style.css",
+    "watch-css": "sass --watch src/assets/css/styles.scss dist/assets/css/style.css"
   }
 }
