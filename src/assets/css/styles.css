@@ -282,7 +282,7 @@ body{
 .activity-feed::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
-.timeline-line {
+[dir="ltr"] .timeline-line {
     position: absolute;
     left: 45px; /* Adjust based on your layout */
     top: 0;
@@ -292,7 +292,15 @@ body{
     z-index: 1; /* Ensure the timeline is behind the avatars */
 
 }
-
+[dir="rtl"] .timeline-line {
+    position: absolute;
+    right: 20px; /* Adjust based on your layout */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #e9ecef;
+    z-index: 1; /* Ensure the timeline is behind the avatars */
+}
 .timeline-point {
     position: relative;
     margin-right: 10px;
